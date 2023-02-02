@@ -3,8 +3,8 @@
 
 /** Listing 1-1.
     @file BagInterface.h */
-#ifndef BAG_INTERFACE_
-#define BAG_INTERFACE_
+#ifndef _BAG_INTERFACE_
+#define _BAG_INTERFACE_
 
 #include <vector>
 
