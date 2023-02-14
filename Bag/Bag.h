@@ -9,7 +9,7 @@ class Bag : public BagInterface<ItemType> {
     static const int DEFAULT_BAG_SIZE = 6;              // Default size of the bag
     ItemType items[DEFAULT_BAG_SIZE];                   // Array of bag items, underlying data structure
     int itemCount;                                      // Current count of bag items
-    int maxItems;                                        // Max capacity of the bag.
+    int maxItems;                                       // Max capacity of the bag.
 
 public:
     Bag();                                              // Default constructor
@@ -18,10 +18,10 @@ public:
     bool add(const ItemType& newEntry);                 // Adds a new entry to the bag
     bool remove(const ItemType& anEntry);               // Removes one occurrence of a given entry from the bag
     void clear();                                       // Removes all entries from the bag
-    int getFrequencyOf(const ItemType& anEntry) const; // Counts the number of times a given entry appears in the bag
+    int getFrequencyOf(const ItemType& anEntry) const;  // Counts the number of times a given entry appears in the bag
     bool contains(const ItemType& anEntry) const;  
-    int getIndexOf(const ItemType& anEntry) const;    // Tests whether this bag contains a given entry
-    std::vector<ItemType> toVector() const;            // Empties and then fills a given vector with all entries that are in this bag
+    int getIndexOf(const ItemType& anEntry) const;      // Tests whether this bag contains a given entry
+    std::vector<ItemType> toVector() const;             // Empties and then fills a given vector with all entries that are in this bag
 };
 
 template<class ItemType>
