@@ -9,10 +9,13 @@ int main()
     Node<int>* root = new Node<int>(5);
     root->setNext(new Node<int>(8));
     root->getNext()->setNext(new Node<int>(10));
-
     // Also could be done as the following:
     // Node<int>* root = new Node<int>(5, new Node<int>(8, new Node<int>(10)))
+    print_list(root);
 
+    // Inserting a new value after root 
+    Node<int>* temp = root->getNext();
+    root->setNext(new Node<int>(9, temp));
     print_list(root);
 
     return 0;
@@ -26,4 +29,5 @@ void print_list(Node<T>* r)
         std::cout << r->getValue() << std::endl;
         r = r->getNext();
     }
+    std::cout << std::endl;
 }
