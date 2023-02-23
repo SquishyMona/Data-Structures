@@ -39,3 +39,8 @@ bool ArrayStack<T>::pop() {
         return true;
     }
 }
+
+template <class T>
+T ArrayStack<T>::peek() const {
+    return stack[top];
+}

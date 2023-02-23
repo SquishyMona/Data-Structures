@@ -10,7 +10,7 @@ class ArrayStack : public StackInterface<T> {
     int top;
 
 public:
-    ArrayStack()
+    ArrayStack();
     bool isEmpty() const;
     bool push(const T& newEntry);
     bool pop();
