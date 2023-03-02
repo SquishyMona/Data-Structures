@@ -23,11 +23,11 @@ bool LLList<T>::insert(int newPosition, const T& newEntry) {
         root = new Node<T>(newEntry);
     }
     else {
-        Node<T>* temp = root;
+        Node<T>* curr = root;
         for(int i = 0; i < newPosition - 1; i++) {
-            temp = temp->getNextNode();
+            curr = curr->getNextNode();
         }
-        temp->setNextNode(new Node<T>(newEntry, temp->getNextNode()));
+        curr->setNextNode(new Node<T>(newEntry, curr->getNextNode()));
         itemCount++;
     }
     return true;
@@ -40,11 +40,11 @@ bool LLList<T>::remove(int position) {
         std::cout << "The list is empty." << std::endl;
         return false;
     }
-    Node<T>* temp = root;
+    Node<T>* curr = root;
     for(int i = 0; i < position - 1; i++) {
-        temp = temp->getNextNode();
+        curr = curr->getNextNode();
     }
-    temp->setNextNode(temp->getNextNode()->getNextNode());
+    curr->setNextNode(curr->getNextNode()->getNextNode());
     itemCount--;
     return true;
 }
